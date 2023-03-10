@@ -1,0 +1,23 @@
+{
+  "-MiBsfuTafbEQ7eAUlfT": {
+    "word": "body",
+    "define": "Contains all the visible content of a web page.",
+    "firebaseKey": "-MiBsfuTafbEQ7eAUlfT",
+    "uid": "",
+    "lang_id": "-MiBuOfHv9Nkcu_cneij"
+  },
+  "-MiBsfuTafbEQ7eAUrTy": {
+    "word": "class",
+    "define": "The most commonly used selector. E.g. “.cloudy” to select an element with classname cloudy (e.g. There can be more than 1 element with the same classname).",
+    "firebaseKey": "-MiBsfuTafbEQ7eAUrTy",
+    "uid": "",
+    "lang_id": "-MiBtwf1BwN9pGavQbGt"
+  },
+  "-MiBvQiWr6X876Na1i3-0": {
+    "word": "loops",
+    "define": "Perform specific tasks repeatedly under applied conditions.",
+    "firebaseKey": "",
+    "uid": "",
+    "lang_id": "-MiBsfuTafbEQ7eAyUUp"
+  }
+}
