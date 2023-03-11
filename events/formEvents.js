@@ -9,7 +9,9 @@ const formEvents = (user) => {
       const payload = {
         word: document.querySelector('#word').value,
         define: document.querySelector('#define').value,
-        lang_id: document.querySelector('#lang_id').value,
+        onhtml: document.querySelector('#onhtml').checked,
+        onjs: document.querySelector('#onjs').checked,
+        oncss: document.querySelector('#oncss').checked,
         uid: user.uid
       };
 
@@ -28,7 +30,9 @@ const formEvents = (user) => {
       const payload = {
         word: document.querySelector('#word').value,
         define: document.querySelector('#define').value,
-        lang_id: document.querySelector('#lang_id').value,
+        onhtml: document.querySelector('#onhtml').checked,
+        onjs: document.querySelector('#onjs').checked,
+        oncss: document.querySelector('#oncss').checked,
         firebaseKey,
       };
 

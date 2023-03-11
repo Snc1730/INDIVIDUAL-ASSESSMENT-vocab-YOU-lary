@@ -30,5 +30,5 @@ const getLanguageVocab = (firebaseKey) => new Promise((resolve, reject) => {
 
 export {
   getLanguageVocab,
-  getLanguages
+  getLanguages,
 };

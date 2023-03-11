@@ -19,13 +19,13 @@ const navBar = () => {
               <a class="nav-link" href="#" id="allVocab">Show All Vocab</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="htmlVocab">HTML</a>
+              <a class="nav-link" href="#" id="navhtml">HTML</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="cssVocab">CSS</a>
+              <a class="nav-link" href="#" id="navcss">CSS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="jsVocab">JS</a>
+              <a class="nav-link" href="#" id="navjs">JS</a>
             </li>
             <li>
             <input

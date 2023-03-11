@@ -22,6 +22,54 @@ const getWords = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// GET HTML WORDS
+const vocabHTML = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Words.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const onHTML = Object.values(data).filter((item) => item.onhtml);
+      resolve(onHTML);
+    })
+    .catch(reject);
+});
+
+// GET JS WORDS
+const vocabJS = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Words.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const onJS = Object.values(data).filter((item) => item.onjs);
+      resolve(onJS);
+    })
+    .catch(reject);
+});
+
+// GET CSS WORDS
+const vocabCSS = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Words.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const onCSS = Object.values(data).filter((item) => item.oncss);
+      resolve(onCSS);
+    })
+    .catch(reject);
+});
+
 // CREATE WORD
 const createWord = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/Words.json`, {
@@ -63,9 +111,26 @@ const getSingleWord = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// DELETE WORD
+const deleteVocabWord = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Words/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 export {
   getWords,
   createWord,
   getSingleWord,
-  updateWord
+  updateWord,
+  deleteVocabWord,
+  vocabHTML,
+  vocabJS,
+  vocabCSS
 };

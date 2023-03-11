@@ -1,6 +1,5 @@
 import clearDom from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
-import selectVocabLanguage from './selectVocabLanguageForm';
 
 const addWordForm = (user, obj = {}) => {
   clearDom();
@@ -14,14 +13,23 @@ const addWordForm = (user, obj = {}) => {
         <label for="define">Definition</label>
         <textarea class="form-control" placeholder="Vocab Definition" id="define" style="height: 100px">${obj.define || ''}</textarea>
       </div>
-      <div class="form-group" id="select-language">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="onhtml" ${obj.onhtml ? 'checked' : ''}>
+        <label class="form-check-label" for="sale">HTML?</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="onjs" ${obj.onjs ? 'checked' : ''}>
+        <label class="form-check-label" for="sale">JavaScript?</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="oncss" ${obj.oncss ? 'checked' : ''}>
+        <label class="form-check-label" for="sale">CSS?</label>
       </div>
       <button type="submit" class="btn btn-primary">Submit Word
       </button>
     </form>`;
 
   renderToDOM('#form-container', domString);
-  selectVocabLanguage(user, `${obj.lang_id || ''}`);
 };
 
 export default addWordForm;
