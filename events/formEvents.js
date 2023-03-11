@@ -12,6 +12,7 @@ const formEvents = (user) => {
         onhtml: document.querySelector('#onhtml').checked,
         onjs: document.querySelector('#onjs').checked,
         oncss: document.querySelector('#oncss').checked,
+        timestamp: new Date().toLocaleString(),
         uid: user.uid
       };
 
